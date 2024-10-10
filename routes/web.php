@@ -13,5 +13,4 @@ Route::get('/book/{book}',[BookController::class,'edit'])->name('book.edit');
 Route::patch('/book/{book}',[BookController::class,'update'])->name('book.update');
 Route::delete('/book/{book}',[BookController::class,'destroy'])->name('book.destroy');
 Route::get('/',[BookController::class,'index'])->name('book.index');
-Route::get('/book/status/{status}',[BookController::class,'filterByStatus'])->name('book.status');
-Route::get('/book/year/{year}',[BookController::class,'filterByPublishedDate'])->name('book.year');
+
