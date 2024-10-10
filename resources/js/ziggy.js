@@ -1,0 +1,5 @@
+const Ziggy = {"url":"http:\/\/localhost","port":null,"defaults":{},"routes":{"book.create":{"uri":"create","methods":["GET","HEAD"]},"book.store":{"uri":"store","methods":["POST"]},"book.show":{"uri":"book\/{book}\/show","methods":["GET","HEAD"],"parameters":["book"],"bindings":{"book":"id"}},"book.edit":{"uri":"book\/{book}","methods":["GET","HEAD"],"parameters":["book"],"bindings":{"book":"id"}},"book.update":{"uri":"book\/{book}","methods":["PATCH"],"parameters":["book"],"bindings":{"book":"id"}},"book.destroy":{"uri":"book\/{book}","methods":["DELETE"],"parameters":["book"],"bindings":{"book":"id"}},"book.index":{"uri":"\/","methods":["GET","HEAD"]},"book.status":{"uri":"book\/status\/{status}","methods":["GET","HEAD"],"parameters":["status"]},"book.year":{"uri":"book\/year\/{year}","methods":["GET","HEAD"],"parameters":["year"]},"storage.local":{"uri":"storage\/{path}","methods":["GET","HEAD"],"wheres":{"path":".*"},"parameters":["path"]}}};
+if (typeof window !== 'undefined' && typeof window.Ziggy !== 'undefined') {
+  Object.assign(Ziggy.routes, window.Ziggy.routes);
+}
+export { Ziggy };
