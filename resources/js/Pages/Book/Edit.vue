@@ -31,7 +31,7 @@
                 </select>
                 <div v-if="form.errors.status" class="text-rose-400">{{ form.errors.status }}</div>
             </div>
-            <button type="submit" class="mt-2 bg-blue-400 text-white border rounded md p-2" :disabled="form.processing">Submit</button>
+            <button type="submit" class="mt-2 bg-blue-400 text-white border rounded md p-2" :disabled="form.processing">Update</button>
         </form>
 
         <progress v-if="form.progress" :value="form.progress.percentage" max="100">

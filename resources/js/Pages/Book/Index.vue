@@ -73,7 +73,7 @@
     <Link v-for="(link, index) in result.links"
    :key="index"
    :href="link.url"
-    class=" relative inline-flex items-center px-4 py-2 border font-medium whitespace-nonwrap"
+    class=" relative inline-flex items-center px-4 py-2 mb-7 border font-medium whitespace-nonwrap"
     :class="[
       link.active
       ? 'z-10 bg-indigo-50 border-indigo-500 text-indigo-600'
@@ -108,12 +108,12 @@ const bookStatus= ref('')
 
 watch (yearFilter, (value) => {
     router.get('/', {year: value},{ preserveState: true}, { replace: true})
-    
+
 })
 
 watch (bookStatus, (value) => {
     router.get('/', {status: value},{ preserveState: true}, { replace: true})
- 
+
 })
 
 function deleteBook(id){
