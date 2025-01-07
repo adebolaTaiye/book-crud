@@ -14,5 +14,6 @@ Steps
 2)  Install all dependancies: composer install and npm install
 3)  set environment variables .env
 4)  start server php artisan migrate and npm run dev
-5)  You can also run the seeder to populate the database with data php artisan db:seed --class=BookSeeder
+5) run php artisan test command for testing
+6)  You can also run the seeder to populate the database with data php artisan db:seed --class=BookSeeder
 >>>>>>> b0f30911de32990945f923a73b4ea99284cebe66
