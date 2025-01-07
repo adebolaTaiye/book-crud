@@ -62,7 +62,7 @@
             <td class=" text-gray-900  px-6 py-4 whitespace-nowrap">
                 <Link :href="route('book.show',resu.id)" class="text-blue-700 text-sm"> Show</Link>
                 <Link :href="route('book.edit',resu.id)" class="text-amber-700 text-sm "> Edit</Link>
-                <button @click="deleteBook(resu.id)" class="text-rose-700 text-sm mx-1 "> Delete</button>
+              <!-- <button @click="deleteBook(resu.id)" class="text-rose-700 text-sm mx-1 "> Delete</button> !-->
             </td>
           </tr>
           </tbody>

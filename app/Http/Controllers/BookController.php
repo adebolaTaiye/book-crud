@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreBookRequest;
+use Illuminate\Support\Facades\Redirect;
 use App\Http\Requests\UpdateBookRequest;
 use App\Models\Book;
 use Inertia\Inertia;
@@ -29,7 +30,7 @@ class BookController extends Controller
         ->withQueryString();
 
         return Inertia::render('Book/Index', [
-            'result' => fn () => $result,
+            'result' => $result,
         ]);
     }
 
@@ -50,7 +51,8 @@ class BookController extends Controller
 
         $book = Book::create($data);
 
-       return to_route('book.index')->with('message','record added Successfully', );
+       return to_route('book.index')->with('message','record added Successfully');
+
     }
 
     /**
@@ -92,8 +94,8 @@ class BookController extends Controller
     {
         $book->delete();
 
-        return to_route('book.index')->with('message','record deleted Successfully', );
+        return to_route('book.index')->with('message','record deleted Successfully');
     }
 
-    
+
 }
